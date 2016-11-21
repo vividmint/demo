@@ -1,4 +1,4 @@
-document.querySelector('.circle').addEventListener('click', function() {
+ubdocument.querySelector('.circle').addEventListener('click', function() {
     console.log("sss");
     document.querySelector('.circle').classList.add('hide');
     document.querySelector('.active').classList.remove('hide');
