@@ -1,0 +1,108 @@
+body {
+    font-family: Microsoft YaHei;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dfd8d0;
+    height: 410px;
+    width: 300px;
+    left: 50%;
+    right: 50%;
+}
+
+.name {
+    padding: 10px 0;
+}
+
+.screen {
+    width: 260px;
+    height: 70px;
+    background-color: #c3c2ab;
+    border: 2px solid #b4b39d;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    padding: 10px 0;
+}
+
+.top-v {
+    display: flex;
+    flex: 1;
+    margin: 10px 0px;
+}
+
+.u {
+    width: 50px;
+    height: 35px;
+    flex: 1;
+}
+
+.common {
+    display: flex;
+    background-color: #818181;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.red {
+    background-color: #a72d45;
+    /*box-shadow: 0px 3px 0px 0px #671c2a;*/
+}
+
+.bottom {
+    flex: 2;
+    display: flex;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+.left-top {
+    flex: 1;
+    display: flex;
+}
+
+.left-bottom {
+    display: flex;
+}
+
+.right {
+    flex: 1;
+}
+
+.uu {
+    height: 35px;
+    margin-top: 10px;
+}
+
+.zero {
+    width: 120px;
+}
+
+.dot {
+    width:50px;
+}
+
+.n {
+    display: flex;
+    height: 90px;
+}

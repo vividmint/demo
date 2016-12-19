@@ -1,0 +1,64 @@
+*	/Users/yangguobao/project/inbox/demo/public/wiki.css	/^* {$/;"	function	line:1
+body	/Users/yangguobao/project/inbox/demo/public/wiki.css	/^body {$/;"	function	line:5
+.a	/Users/yangguobao/project/inbox/demo/public/wiki.css	/^.a {$/;"	function	line:15
+.random	/Users/yangguobao/project/inbox/demo/public/wiki.css	/^.random {$/;"	function	line:20
+.detail	/Users/yangguobao/project/inbox/demo/public/wiki.css	/^.detail {$/;"	function	line:25
+.search	/Users/yangguobao/project/inbox/demo/public/wiki.css	/^.search {$/;"	function	line:28
+input	/Users/yangguobao/project/inbox/demo/public/wiki.css	/^input {$/;"	function	line:35
+.circle	/Users/yangguobao/project/inbox/demo/public/wiki.css	/^.circle {$/;"	function	line:42
+.hide	/Users/yangguobao/project/inbox/demo/public/wiki.css	/^.hide {$/;"	function	line:52
+.active	/Users/yangguobao/project/inbox/demo/public/wiki.css	/^.active {$/;"	function	line:56
+.cross	/Users/yangguobao/project/inbox/demo/public/wiki.css	/^.cross {$/;"	function	line:66
+.name	/Users/yangguobao/project/inbox/demo/public/wiki.css	/^.name{$/;"	function	line:74
+.description	/Users/yangguobao/project/inbox/demo/public/wiki.css	/^.description{$/;"	function	line:78
+html	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^<html>$/;"	function	line:2
+head	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^<head>$/;"	function	line:4
+meta	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^    <meta charset="utf-8">$/;"	function	line:5
+link	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^    <link rel="stylesheet" href=".\/font-awesome\/css\/font-awesome.css" media="screen" title="no title">$/;"	function	line:6
+link	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^    <link rel="stylesheet" href=".\/wiki.css" media="screen" title="no title">$/;"	function	line:7
+title	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^    <title><\/title>$/;"	function	line:8
+body	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^<body>$/;"	function	line:11
+div	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^    <div class="container">$/;"	function	line:12
+a	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^        <a class="a random" href="https:\/\/en.wikipedia.org\/wiki\/Special:Random">Click here for a random article<\/a>$/;"	function	line:13
+section	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^    <section class="a search">$/;"	function	line:14
+div	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^        <div class="circle"><\/div>$/;"	function	line:15
+input	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^        <input class="hide active">$/;"	function	line:16
+div	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^        <div class="hide cross">X<\/div>$/;"	function	line:17
+section	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^    <section class="list">$/;"	function	line:19
+section	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^    <section class="a detail">Click icon to search<\/section>$/;"	function	line:24
+script	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^    <script src=".\/wiki.js" charset="utf-8"><\/script>$/;"	function	line:28
+script	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^    <script src="http:\/\/localhost:8099\/zepto.js" charset="utf-8"><\/script>$/;"	function	line:29
+xxxx	/Users/yangguobao/project/inbox/demo/public/wiki.html	/^        function xxxx(data){$/;"	function	line:31
+body	/Users/yangguobao/project/inbox/demo/public/tv.css	/^body {$/;"	function	line:1
+.container	/Users/yangguobao/project/inbox/demo/public/tv.css	/^.container {$/;"	function	line:7
+.title	/Users/yangguobao/project/inbox/demo/public/tv.css	/^.title {$/;"	function	line:13
+.name	/Users/yangguobao/project/inbox/demo/public/tv.css	/^.name{$/;"	function	line:25
+.tags	/Users/yangguobao/project/inbox/demo/public/tv.css	/^.tags{$/;"	function	line:29
+.tag	/Users/yangguobao/project/inbox/demo/public/tv.css	/^.tag {$/;"	function	line:35
+.long	/Users/yangguobao/project/inbox/demo/public/tv.css	/^.long{$/;"	function	line:47
+.short	/Users/yangguobao/project/inbox/demo/public/tv.css	/^.short{$/;"	function	line:52
+addEvent	/Users/yangguobao/project/inbox/demo/public/wiki.js	/^addEvent(document, "keypress", function(e) {$/;"	function	line:16
+success	/Users/yangguobao/project/inbox/demo/public/wiki.js	/^            success: function(data, status, xhr) {$/;"	function	line:23
+render	/Users/yangguobao/project/inbox/demo/public/wiki.js	/^function render() {$/;"	function	line:35
+render	/Users/yangguobao/project/inbox/demo/public/wiki.js	/^function render() {$/;"	function	line:35
+addEvent	/Users/yangguobao/project/inbox/demo/public/wiki.js	/^function addEvent(element, eventName, callback) {$/;"	function	line:42
+addEvent	/Users/yangguobao/project/inbox/demo/public/wiki.js	/^function addEvent(element, eventName, callback) {$/;"	function	line:42
+html	/Users/yangguobao/project/inbox/demo/public/tv.html	/^<html>$/;"	function	line:2
+head	/Users/yangguobao/project/inbox/demo/public/tv.html	/^<head>$/;"	function	line:4
+meta	/Users/yangguobao/project/inbox/demo/public/tv.html	/^    <meta charset="utf-8">$/;"	function	line:5
+link	/Users/yangguobao/project/inbox/demo/public/tv.html	/^    <link rel="stylesheet" href=".\/tv.css" media="screen" title="no title">$/;"	function	line:6
+title	/Users/yangguobao/project/inbox/demo/public/tv.html	/^    <title><\/title>$/;"	function	line:7
+body	/Users/yangguobao/project/inbox/demo/public/tv.html	/^<body>$/;"	function	line:10
+div	/Users/yangguobao/project/inbox/demo/public/tv.html	/^    <div class="container">$/;"	function	line:11
+section	/Users/yangguobao/project/inbox/demo/public/tv.html	/^        <section class="title">$/;"	function	line:12
+div	/Users/yangguobao/project/inbox/demo/public/tv.html	/^            <div class="name">TWITCH STREAMERS<\/div>$/;"	function	line:13
+div	/Users/yangguobao/project/inbox/demo/public/tv.html	/^            <div class="tags">$/;"	function	line:14
+div	/Users/yangguobao/project/inbox/demo/public/tv.html	/^                <div class="long tag all">All<\/div>$/;"	function	line:15
+div	/Users/yangguobao/project/inbox/demo/public/tv.html	/^                <div class="short tag online">c<\/div>$/;"	function	line:16
+div	/Users/yangguobao/project/inbox/demo/public/tv.html	/^                <div class="short tag offline">c<\/div>$/;"	function	line:17
+section	/Users/yangguobao/project/inbox/demo/public/tv.html	/^        <section class="a">$/;"	function	line:20
+section	/Users/yangguobao/project/inbox/demo/public/tv.html	/^        <section class="b"><\/section>$/;"	function	line:25
+section	/Users/yangguobao/project/inbox/demo/public/tv.html	/^        <section class="c"><\/section>$/;"	function	line:26
+script	/Users/yangguobao/project/inbox/demo/public/tv.html	/^    <script src="http:\/\/localhost:8099\/zepto.js" charset="utf-8"><\/script>$/;"	function	line:28
+script	/Users/yangguobao/project/inbox/demo/public/tv.html	/^    <script src=".\/tv.js" charset="utf-8"><\/script>$/;"	function	line:29
+success	/Users/yangguobao/project/inbox/demo/public/tv.js	/^    success: function(data, status, xhr) {$/;"	function	line:31

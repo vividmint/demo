@@ -10,7 +10,7 @@
     <div class="list">
 
     </div>
-    <script src="./zepto.js" charset="utf-8"></script>
+    <script src="http://localhost:8099/zepto.js" charset="utf-8"></script>
     <script type="text/javascript">
         //   // fetch({
         //   //
@@ -164,48 +164,117 @@
         // function p3(c){
         //   return Promise.resolve(c-10)
         // }
-        request("http://localhost:7777/postContent", "POST", {
-            xxx: 22
-        }).then(function(data) {
-            console.log(data);
-        }, function(err) {
-            console.log(err)
+        // request("http://localhost:7777/postContent", "POST", {
+        //     xxx: 22
+        // }).then(function(data) {
+        //     console.log(data);
+        // }, function(err) {
+        //     console.log(err)
+        // });
+        //
+        // function request(url, method, body) {
+        //     if (!method) {
+        //         method == "GET"
+        //     }
+        //     var params = {
+        //         method: method,
+        //         mode: "cors",
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         }
+        //     }
+        //
+        //     if (method == "POST") {
+        //         if (body) {
+        //             params.body = JSON.stringify(body);
+        //         } else {
+        //             params.body = "";
+        //         }
+        //     }
+        //     return fetch(url, params).then(function(response) {
+        //         console.log(response);
+        //         if (response.status >= 200 && response.status < 300) {
+        //             return response.json();
+        //         } else {
+        //             return response.json().then(function(data) {
+        //                 return Promise.reject(data);
+        //             })
+        //         }
+        //     }, function(err) {
+        //         return Promise.reject(err);
+        //     }).then(function(data) {
+        //         return Promise.resolve(data);
+        //     });
+        // }
+        var requestList = [];
+        var _data = [];
+        var r1 = $.ajax({
+            url: `https://wind-bow.hyperdev.space/twitch-api/channels/ESL_SC2`,
+            dataType: "jsonp",
+            success: function(data, status, xhr) {
+                _data.push(data);
+
+            }
+        })
+
+        var r2 = $.ajax({
+            url: `https://wind-bow.hyperdev.space/twitch-api/channels/freecodecamp`,
+            dataType: "jsonp",
+            success: function(data, status, xhr) {
+                _data.push(data);
+                if (_data.length == 2) {
+                    //callback(_data);
+                }
+            }
         });
 
-        function request(url, method, body) {
-            if (!method) {
-                method == "GET"
-            }
-            var params = {
-                method: method,
-                mode: "cors",
-                headers: {
-                    "Content-Type": "application/json"
+        var r3 = $.ajax({
+            url: `https://wind-bow.hyperdev.space/twitch-api/channels/test_channe`,
+            dataType: "jsonp",
+            success: function(data, status, xhr) {
+                _data.push(data);
+                if (_data.length == 2) {
+                    //callback(_data);
                 }
             }
+        });
 
-            if (method == "POST") {
-                if (body) {
-                    params.body = JSON.stringify(body);
-                } else {
-                    params.body = "";
-                }
-            }
-            return fetch(url, params).then(function(response) {
-                console.log(response);
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    return response.json().then(function(data) {
-                        return Promise.reject(data);
-                    })
-                }
-            }, function(err) {
-                return Promise.reject(err);
-            }).then(function(data) {
-                return Promise.resolve(data);
-            });
-        }
+        requestList = [r1, r2, r3];
+
+        // function all(_requestList, cb) {
+        //
+        // };
+        //
+        // all(requestList, function(xxx) {
+        //     console.log(xxx[0]);
+        //     console.log(xxx[1]);
+        //     console.log(xxx[2]);
+        //
+        // })
+        //
+        // function callback(xxx) {
+        //     console.log(xxx);
+        // }
+        $.when(r1, r2, r3).then(function () {
+          console.log("obj");
+        })
+        // setInterval(function() {
+        //
+        // }, 10)
+        // var data2 = [].concat(_data);
+        // var data3 = _data;
+        // console.log(data2);
+        // console.log(_data);
+
+        // console.log(1);
+        // setTimeOut(function() {
+        //     console.log(2);
+        // }, 1000);
+        // console.log(4);
+        // setTimeOut(function() {
+        //     console.log(3);
+        // }, 1000);
+        // console.log(5)
     </script>
 </body>
 
