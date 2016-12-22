@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="../showdown/dist/showdown.js"></script>
+    <script src="../react-demos/build/react.js"></script>
+    <script src="../react-demos/build/react-dom.js"></script>
+    <script src="../react-demos/build/browser.min.js"></script>
+    <script src="../react-demos/build/jquery.min.js"></script>
+    <link rel="stylesheet" href="./react.css">
+</head>
+
+<body>
+    <div id="example"></div>
+    <div class="container"></div>
+    <script type="text/babel">
+        var App = React.createClass({
+          getInitialState: function() {
+          return {
+            value: 'xxx',
+            isInit:true
+          };
+           },
+           _onTextareaChange:function(v){
+             this.setState({
+               value:v
+             });
+           },
+          render:function(){
+            var styles = {
+              display:"flex"
+            }
+            return (<div style={styles} className="main" >
+            <Editor value={this.state.value} onTextareaChange={this._onTextareaChange} />
+            <Show value={this.state.value} />
+            </div>)
+          }
+        })
+        var Editor = React.createClass({
+          handleChange:function(e){
+            this.props.onTextareaChange(e.target.value);
+          },
+          render:function(){
+            var text = this.props.value;
+            var styles = {
+              width: '500px',
+              height: '600px',
+              border: '1px solid black',
+              margin: '20px',
+              resize: 'none'
+            }
+            return(
+              <textarea onChange={this.handleChange} style={styles} value={text}></textarea>);
+          }
+        })
+        var Show = React.createClass({
+          componentWillReceiveProps:function(nextProps){
+            console.log(nextProps);
+            console.log('test');
+          },
+          shouldComponentUpdate:function(){
+            console.log('shou');
+            return true;
+          },
+
+          render:function(){
+            var text = this.props.value;
+            var converter = new showdown.Converter();
+            var html = converter.makeHtml(text);
+            var styles = {
+              width: '500px',
+              height: '600px',
+              border: '1px dashed black',
+              margin: '20px'
+            }
+            return (<div style={styles} dangerouslySetInnerHTML={{__html: html}}></div>)
+          }
+        })
+        ReactDOM.render(
+          <App />,
+          document.querySelector('.container')
+        )
+
+
+    </script>
+</body>
+
+</html>
