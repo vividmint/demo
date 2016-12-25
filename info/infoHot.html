@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="../react-demos/build/react.js"></script>
+   <script src="../react-demos/build/react-dom.js"></script>
+   <script src="../react-demos/build/browser.min.js"></script>
+   <script src="../react-demos/build/jquery.min.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="container" style="background-color:#DDDDDD"></div>
+    <script type="text/babel">
+    var App = React.createClass({
+        getInitialState: function() {
+            return {data: null}
+        },
+        componentDidMount: function() {
+            request("http://scuinfo.com/api/hot").then(result => {
+                var data = {};
+                console.log(result);
+                for (var i = 0; i < result.data.length; i++) {
+                    var id = result.data[i].id,
+                        contentV = result.data[i].content;
+                    data[id] = {};
+                    data[id].content = contentV;
+                }
+                this.setState({data: data});
+                console.log(this.state);
+            })
+        },
+        render: function() {
+            var styles = {
+                display: "flex",
+                flexDirection: 'column',
+                alignItems: 'center',
+                fontFamily: 'Microsoft YaHei',
+                padding:'0px 30px',
+                fontSize:'16px'
+            }
+            if (!this.state.data) {
+                return <Loading/>
+            }
+            return (
+                <div style={styles} className="main">
+                    <List data={this.state.data}/>
+                </div>
+            )
+        }
+    })
+    var Avatar = React.createClass({
+      render:function(){
+        return(
+          <div><img src="http://ww4.sinaimg.cn/mw690/a958717cgw1erw6uu1dt6j20fs0fsmyj.jpg" /></div>
+        )
+      }
+    })
+    var Item = React.createClass({
+        render: function() {
+            var styles = {
+              margin:'30px 0px',
+              backgroundColor:'white',
+              padding:'50px',
+              borderRadius:'8px',
+              lineHeight:'70px'
+            }
+            return (
+                <div style={styles}><Avatar />{this.props.data.content}</div>
+            )
+        }
+
+    })
+
+    var List = React.createClass({
+
+        render: function() {
+          var styles = {
+            display:'flex',
+            flexDirection:'column',
+            alignItems:'center',
+          }
+            var arr = [];
+            for (var key in this.props.data) {
+                arr.push(<Item key={'item' + key} data={this.props.data[key]}/>)
+            }
+            return (
+                <div>
+                    {arr}
+                </div>
+            )
+
+        }
+    })
+
+    var Loading = React.createClass({
+        render: function() {
+          var styles = {
+            textAlign:'center',
+            marginTop:'300px'
+          }
+            return (
+                <div style={styles}>loading...</div>
+            )
+        }
+    })
+    ReactDOM.render(
+        <App/>, document.querySelector('.container'))
+
+    function request(url, method, body) {
+        if (!method) {
+            method = 'GET'
+        }
+        var obj = {
+            method: method,
+            mode: "cors"
+        }
+        if (method == 'POST' || method == 'DELETE') {
+            obj.body = JSON.stringify(body)
+        }
+        return fetch(url, obj).then(function(response) {
+            //console.log(response);
+            if (response.status >= 200 && response.status < 300) {
+                return response.json();
+            } else {
+                return response.json();
+            }
+        }, function(err) {
+            console.log(err)
+            return Promise.reject(err);
+        })
+    }
+
+    </script>
+  </body>
+</html>
